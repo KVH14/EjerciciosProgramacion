@@ -1,0 +1,55 @@
+📌 Endpoints POST
+1. Registrar un material
+
+Código
+POST http://localhost:8080/api/materiales
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Libro de Matemáticas",
+  "categoria": "Libros",
+  "cantidad": 10,
+  "activo": true
+}
+2. Registrar otro material
+
+Código
+POST http://localhost:8080/api/materiales
+Content-Type: application/json
+
+{
+  "id": 2,
+  "nombre": "Marcadores",
+  "categoria": "Útiles",
+  "cantidad": 25,
+  "activo": true
+}
+3. Registrar una categoría
+
+Código
+POST http://localhost:8080/api/categorias
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Libros"
+}
+📌 Endpoints GET
+1. Consultar todos los materiales activos
+
+Código
+GET http://localhost:8080/api/materiales/activos
+2. Consultar inventario completo
+
+Código
+GET http://localhost:8080/api/materiales
+3. Consultar todas las categorías
+
+Código
+GET http://localhost:8080/api/categorias
+📌 Endpoint PUT (actualización)
+Actualizar cantidad de un material
+
+Código
+PUT http://localhost:8080/api/materiales/1/cantidad?nuevaCantidad=15

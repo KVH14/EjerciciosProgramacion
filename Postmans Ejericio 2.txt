@@ -1,0 +1,46 @@
+📌 Endpoints POST obligatorios
+1. Crear eventos académicos  
+Ruta:
+
+Código
+POST http://localhost:8080/api/eventos
+Ejemplo de cuerpo JSON:
+
+json
+{
+  "id": 1,
+  "nombre": "Seminario de Inteligencia Artificial",
+  "fecha": "2026-04-20",
+  "duracion": "2 horas",
+  "modalidad": "Presencial"
+}
+2. Registrar estudiantes  
+Ruta:
+
+Código
+POST http://localhost:8080/api/estudiantes
+Ejemplo de cuerpo JSON:
+
+json
+{
+  "id": 1,
+  "nombre": "Juan Pérez",
+  "correo": "juan@example.com"
+}
+3. Inscribir estudiantes a eventos  
+Ruta:
+
+Código
+POST http://localhost:8080/api/estudiantes/inscribir?estudianteId=1&eventoId=1
+Este endpoint no necesita cuerpo JSON porque recibe los parámetros en la URL (estudianteId y eventoId).
+Respuesta esperada:
+
+Código
+"Estudiante inscrito correctamente"
+👉 En resumen, los POST que pide este taller son:
+
+POST /api/eventos → crear un evento.
+
+POST /api/estudiantes → crear un estudiante.
+
+POST /api/estudiantes/inscribir → inscribir estudiante a un evento.

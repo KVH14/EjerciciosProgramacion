@@ -1,0 +1,46 @@
+Una institución educativa desea implementar un sistema para que los profesores puedan gestionar las tareas académicas asignadas a sus estudiantes. Cada tarea tiene un título, una descripción, una fecha de entrega y un estado (pendiente o entregada)."
+
+📌 Endpoints de Estudiantes
+1. Crear estudiante (POST)
+
+Código
+POST http://localhost:8080/api/estudiantes
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Juan",
+  "correo": "juan@example.com"
+}
+2. Listar estudiantes (GET)
+
+Código
+GET http://localhost:8080/api/estudiantes
+3. Buscar estudiante por ID (GET)
+
+Código
+GET http://localhost:8080/api/estudiantes/1
+4. Eliminar estudiante (DELETE)
+
+Código
+DELETE http://localhost:8080/api/estudiantes/1
+📌 Endpoints de Tareas
+1. Crear tarea (POST)
+
+Código
+POST http://localhost:8080/api/tareas
+Content-Type: application/json
+
+{
+  "id": 1,
+  "descripcion": "Entregar informe",
+  "entregada": false
+}
+2. Listar tareas (GET)
+
+Código
+GET http://localhost:8080/api/tareas
+3. Listar tareas pendientes (GET)
+
+Código
+GET http://localhost:8080/api/tareas/pendientes
